@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <base href="">
+
+  <title>Vvveb - Messages</title>
+
+  <link href="css/admin.css" rel="stylesheet">
+</head>
+
+
+<body class="messages">
+
+  <div id="container">
+
+       <div class="sidebar" data-v-copy-from="index.html,.sidebar"></div>
+
+
+    <div class="main">
+
+      <div class="clearfix top-header" data-v-copy-from="index.html,.top-header">
+
+      </div>
+
+      <form id="settings-form" action="" method="post" class="needs-validation" novalidate data-v-product>
+        <input type="hidden" name="action" id="action" value="save">
+        <div class="actions">
+          <div class="title">
+            <h4 class="text-muted mt-2">
+              <i class="ion-ios-email-outline"></i>&ensp;
+              Messages
+            </h4>
+          </div>
+          <div class="btns">
+
+          </div>
+        </div>
+        <div>
+          <div id="main-content">
+
+         	<div class="notifications" data-v-notifications data-v-copy-from="index.html,.notifications"></div>
+
+            <div class="content clearfix settings">
+
+
+
+			<div class="table-responsive">
+                <table class="table table-hover middle-align" data-v-messages>
+
+
+                  <thead>
+                    <tr>
+                      <th class="col-cb">
+                        <div class="checkbox_outer">
+
+                          <label class="form-check">
+                            <input type="checkbox" class="form-check-input" value="4" name="message[]" data-v-vvveb-action="table.bulkSelect">
+                            <span class="form-check-label"></span>
+                            <span class="custom-control-description">&nbsp;</span>
+                          </label>
+
+
+                        </div>
+                      </th>
+					  
+					  <th style="width:200px;text-align:center;">
+                        <i class="la la-image"></i>&ensp;<span>Name</span>
+                      </th>
+                                            
+                      <th class="message">
+                        <i class="la la-box"></i>&ensp;<span>Subject</span>
+                      </th>                      
+    
+                      <th class="message">
+                        <i class="la la-box"></i>&ensp;<span>Email</span>
+                      </th>
+                      <th class="message">
+                        <i class="la la-box"></i>&ensp;<span>First name</span>
+                      </th>
+                      <th class="message">
+                        <i class="la la-box"></i>&ensp;<span>Last name</span>
+
+
+                      <th class="actions text-center" style="width:150px">
+                        <i class="la la-edit"></i>&ensp;<span>Actions</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="message" data-v-message>
+                      <td class="checkbox">
+                        <label class="form-check">
+                          <input type="checkbox" class="form-check-input" value="4" name="message_id[]" data-v-vvveb-action="table.selectRow" data-v-message-message_id>
+                          <span class="form-check-label"></span>
+                          <span class="custom-control-description">&nbsp;</span>
+                        </label>
+
+                      </td>
+
+                      <td class="img" style="width:200px;text-align:center;">
+                        <a href="/admin?module=products&amp;action=product&amp;id=4" data-v-message-edit-url>
+                          <span data-v-message-type>Type</span>
+                        </a>
+                      </td>
+
+                      <td>
+						  <a href="/admin?module=products&amp;action=product&amp;id=4" data-v-message-edit-url>
+                          <span data-v-message-subject>Data</span>
+                          </a>
+                      </td>
+
+                      <td>
+                          <span data-v-message-email>Data</span>
+                      </td>
+                      <td>
+                          <span data-v-message-firstname>Data</span>
+                      </td>
+                      <td>
+                          <span data-v-message-lastname>Data</span>
+                      </td>
+
+                      <td class="actions" style="min-width:200px">
+
+                        <div class="btn-group">
+                          <a type="button" class="btn btn-outline-secondary" data-v-message-edit-url>
+                            <i class="la la-pencil-alt text-primary"></i>
+                            <span>View</span>
+                          </a>
+
+                          <button type="button" class="btn btn-outline-secondary bg-white dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+
+                            <span class="visually-hidden">Toggle primary</span>
+                          </button>
+                          <ul class="dropdown-menu">
+
+                            <li>
+                              <a class="dropdown-item text-danger" data-v-message-delete-url onclick="return confirm('Are you sure?')">
+                                <i class="ion-trash-a">&ensp;</i>
+                                <span>Delete</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr data-v-if-not="this.count > 0">
+                      <td colspan="100">
+                        <div class="text-center p-4">
+                          <div>
+                            <i class="la la-file-alt fs-1 mb-2"></i>
+                            <h6>No messages to display!</h6>
+                          </div>
+
+                          <a href data-v-url-params='{"module":"product/message"}' data-bs-toggle="tooltip" title="" class="btn btn-primary btn-icon mt-3">
+                            <i class="ion-android-add-circle"></i>&nbsp; <span>Add message</span>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                <div class="d-flex justify-content-end ">
+					<div id="pagination" data-v-pagination data-v-copy-from="content/posts.html,#pagination"></div>
+                </div>
+              </div>
+                  
+            </div>
+          </div>
+      </form>
+
+    </div>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="../../../js/admin.js"></script>
+
+  
+
+</body>
+</html>
